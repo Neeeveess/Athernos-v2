@@ -1,0 +1,16 @@
+%d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show {
+    width: 25vw !important;
+    min-width: 300px !important;
+    justify-content: flex-end !important;
+    transition: all linear 300ms !important;
+}
+.close {
+    width: 50px !important;
+    min-width: 50px !important;
+    transition: all linear 300ms !important;
+}

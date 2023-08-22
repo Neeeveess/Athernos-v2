@@ -1,0 +1,33 @@
+@import "custom";
+.menu-lateral {
+    position: relative;
+    padding: 15px;
+    max-width: 500px;
+    width: 25vw;
+    min-width: 300px;
+    height: 100vh;
+
+    @extend %d-flex;
+    align-items: start;
+    justify-content: flex-end;
+    background-color: $gray;
+
+    .conteudo-esquerdo {
+        @extend %d-flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        .principal {
+            @extend %d-flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .title {
+                font-size: 4.8rem;
+                text-align: center;
+            }
+        }
+    }
+}
