@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    //MENU LATERAL
     const menuHamburguer = $("#menu-hamburguer");
     const menuLateral = $("#menu-lateral");
     menuHamburguer.on("click", () => {
@@ -21,5 +22,27 @@ jQuery(document).ready(function ($) {
             menuLateral.removeClass("show");
             menuLateral.addClass("close");
         }
+    });
+
+    //Notificação de Mensagem
+    const divMessage = $(".div-alert");
+    let msg = "Teste";
+
+    function showMessage(msg, type = "success") {
+        const message = $("<span>", {
+            class: "message-" + type,
+        })
+            .text(msg)
+            .appendTo(divMessage);
+
+        setTimeout(() => {
+            message.css("display", "none");
+        }, 3000);
+    }
+
+    menuHamburguer.on("click", () => {
+        showMessage(msg, "success");
+        showMessage(msg, "danger");
+        showMessage(msg, "warning");
     });
 });

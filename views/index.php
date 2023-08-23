@@ -16,6 +16,9 @@
     <?php include_once './telas/menu-lateral.php'; ?>
     <div id="conteudo-principal" class="conteudo-principal">
         Teste conteudo
+        <div class="div-alert">
+        
+        </div>
     </div>
 </body>
 </html>
