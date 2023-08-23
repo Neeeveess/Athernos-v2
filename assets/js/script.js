@@ -9,27 +9,17 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    $("#menu-hamburguer").on("click", () => {
-        if ($("#menu-lateral").hasClass("close")) {
-            setTimeout(() => {
-                $(".conteudo-esquerdo").show("slow"); //MOSTRAR CONTEUDO
-                $("#menu-lateral").css({
-                    justifyContent: "flex-end",
-                });
-            }, 300);
-
-            $("#menu-lateral").removeClass("close");
-            $("#menu-lateral").addClass("show");
+    const menuHamburguer = $("#menu-hamburguer");
+    const menuLateral = $("#menu-lateral");
+    menuHamburguer.on("click", () => {
+        if (menuLateral.hasClass("close")) {
+            //Abrir menu
+            menuLateral.removeClass("close");
+            menuLateral.addClass("show");
         } else {
-            $(".conteudo-esquerdo").hide(1000); //OCULTAR CONTEUDO
-            $("#menu-lateral").removeClass("show");
-            $("#menu-lateral").addClass("close");
-
-            setTimeout(() => {
-                $("#menu-lateral").css({
-                    justifyContent: "center",
-                });
-            }, 300);
+            //Fechar menu
+            menuLateral.removeClass("show");
+            menuLateral.addClass("close");
         }
     });
 });
