@@ -3,7 +3,6 @@
     position: relative;
     padding: 15px;
     max-width: 500px;
-    // width: 25vw;
     min-width: 300px;
     height: 100vh;
 
@@ -27,6 +26,7 @@
             .title {
                 font-size: 4.8rem;
                 text-align: center;
+                color: $primary;
             }
         }
     }

@@ -29,20 +29,17 @@ jQuery(document).ready(function ($) {
     let msg = "Teste";
 
     function showMessage(msg, type = "success") {
-        const message = $("<span>", {
+        const message = $("<div>", {
             class: "message-" + type,
         })
             .text(msg)
             .appendTo(divMessage);
-
         setTimeout(() => {
-            message.css("display", "none");
+            message.hide("fast");
         }, 3000);
     }
 
     menuHamburguer.on("click", () => {
         showMessage(msg, "success");
-        showMessage(msg, "danger");
-        showMessage(msg, "warning");
     });
 });

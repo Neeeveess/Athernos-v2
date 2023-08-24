@@ -1,14 +1,32 @@
 @keyframes slideUp {
     0% {
-        transform: translateY(110%);
-        opacity: 0;
+        transform: translateY(210%);
+        scale: 0.3;
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-10%);
     }
     80% {
-        transform: translateY(10%);
+        transform: translateY(-10%);
+        scale: 0.8;
     }
     100% {
         transform: translateY(0);
+        scale: 1;
         opacity: 1;
+    }
+}
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 @mixin time($name: "success", $bg-initial: #d4eddabe, $bg-middle: #caebd2) {
@@ -20,9 +38,11 @@
         50% {
             background-color: $bg-middle;
         }
+        98% {
+            background-color: $bg-initial;
+        }
         100% {
             width: 100%;
-            background-color: $bg-initial;
         }
     }
 }

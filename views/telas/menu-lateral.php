@@ -1,7 +1,7 @@
 <sidebar id="menu-lateral" class="menu-lateral">
     <div class="conteudo-esquerdo">
         <div class="principal">
-            <a class="logo" href=""><img src="" alt="">logo</a>
+            <a class="logo" href=""><img src="../../assets/imgs/logo-athernos.png" alt=""></a>
             <section class="usuario">
                 <h2 class="title">
                     Bem Vindo - Admin
