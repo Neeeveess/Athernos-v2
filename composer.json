@@ -3,8 +3,7 @@
     "description": "Um projeto de estoque",
     "autoload": {
         "psr-4": {
-            "Joao\\Athernos\\": "src/",
-            "Joao\\Views": "src/views"
+            "Athernos\\": "src/"
         }
     },
     "authors": [
