@@ -1,11 +1,12 @@
 <sidebar id="menu-lateral" class="menu-lateral">
     <div class="conteudo-esquerdo">
         <div class="principal">
-            <a class="principal__logo" href=""><img src="../assets/imgs/logo-teste.png" alt=""></a>
+            <a class="principal__logo" href=""><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/Athernos-v2/src/assets/imgs/logo-teste.png" alt=""></a>
             <section class="usuario">
                 <h2 class="principal__title">
-                    Bem Vindo - Admin
-                    <!-- <?php echo "Bem vindo " . "<span>" . $_SESSION['nome'] . "</span>"; ?> -->
+                Bem Vindo -<span class='principal__title--destack'> Admin</span>
+                    
+                    <!-- <?php echo "Bem vindo " . "<span class='principal__title--destack'>" . $_SESSION['nome'] . "</span>"; ?> -->
                 </h2>
             </section>
             <nav class="nav-bar">

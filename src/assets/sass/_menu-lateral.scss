@@ -1,7 +1,7 @@
 @import "custom";
 .menu-lateral {
     position: relative;
-    padding: 15px;
+    padding: 30px 15px;
     max-width: 500px;
     min-width: 300px;
     height: 100vh;
@@ -24,9 +24,16 @@
             flex-direction: column;
 
             &__title {
-                font-size: 4.8rem;
+                font-size: 3.6rem;
                 text-align: center;
+                font-weight: 400;
                 color: $secundary;
+                border-top: 1px solid $primary;
+                border-bottom: 1px solid $primary;
+                &--destack {
+                    font-weight: 600;
+                    color: $tertiary;
+                }
             }
             &__logo {
                 img {
