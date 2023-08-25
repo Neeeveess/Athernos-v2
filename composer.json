@@ -1,0 +1,17 @@
+{
+    "name": "joao/athernos",
+    "description": "Um projeto de estoque",
+    "autoload": {
+        "psr-4": {
+            "Joao\\Athernos\\": "src/",
+            "Joao\\Views": "src/views"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Vitor Neves",
+            "email": "jvneves_marq@hotmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,9 +1,9 @@
 <sidebar id="menu-lateral" class="menu-lateral">
     <div class="conteudo-esquerdo">
         <div class="principal">
-            <a class="logo" href=""><img src="../../assets/imgs/logo-athernos.png" alt=""></a>
+            <a class="principal__logo" href=""><img src="../assets/imgs/logo-teste.png" alt=""></a>
             <section class="usuario">
-                <h2 class="title">
+                <h2 class="principal__title">
                     Bem Vindo - Admin
                     <!-- <?php echo "Bem vindo " . "<span>" . $_SESSION['nome'] . "</span>"; ?> -->
                 </h2>
