@@ -2,19 +2,21 @@
 .menu-lateral {
     position: relative;
     padding: 30px 15px;
-    max-width: 500px;
-    min-width: 300px;
+    width: 450px;
     height: 100vh;
 
     @extend %d-flex;
     align-items: start;
     justify-content: flex-end;
+    gap: 2rem;
     background-color: $gray;
 
     .conteudo-esquerdo {
         @extend %d-flex;
         justify-content: space-between;
         flex-direction: column;
+
+        width: 100%;
         height: 100%;
         .principal {
             @extend %d-flex;
@@ -22,14 +24,15 @@
             align-items: center;
             justify-content: space-between;
             flex-direction: column;
+            width: 100%;
 
             &__title {
                 font-size: 3.6rem;
                 text-align: center;
                 font-weight: 400;
-                color: $secundary;
-                border-top: 1px solid $primary;
-                border-bottom: 1px solid $primary;
+                color: $black-text;
+                // border-top: 1px solid $primary;
+                // border-bottom: 1px solid $primary;
                 &--destack {
                     font-weight: 600;
                     color: $tertiary;
@@ -41,6 +44,39 @@
                     object-position: center;
                     width: 100%;
                     max-width: 150px;
+                }
+            }
+            .nav-bar {
+                margin-top: 2rem;
+                width: 100%;
+                &__title {
+                    font-size: 1.8rem;
+                    color: $black-text;
+                }
+                &__itens {
+                    @extend %d-flex;
+                    align-items: start;
+                    flex-direction: column;
+                    padding-left: 2rem;
+                }
+                &__item {
+                    font-size: 1.6rem;
+                    color: $secundary;
+                }
+            }
+        }
+    }
+    .icon-menu {
+        padding-top: 9px;
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            svg {
+                width: 40px;
+                height: 40px;
+                path {
+                    fill: $secundary;
                 }
             }
         }

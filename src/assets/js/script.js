@@ -12,15 +12,23 @@ jQuery(document).ready(function ($) {
     //MENU LATERAL
     const menuHamburguer = $("#menu-hamburguer");
     const menuLateral = $("#menu-lateral");
+    const svgEsquerda = $(".svg-esquerda");
+    const svgDireita = $(".svg-direita");
+    svgDireita.hide();
+    console.log(svgDireita);
+
     menuHamburguer.on("click", () => {
         if (menuLateral.hasClass("close")) {
             //Abrir menu
-            menuLateral.removeClass("close");
-            menuLateral.addClass("show");
+            menuLateral.removeClass("close").addClass("show");
+            svgDireita.hide();
+            svgEsquerda.show();
         } else {
             //Fechar menu
-            menuLateral.removeClass("show");
-            menuLateral.addClass("close");
+            menuLateral.removeClass("show").addClass("close");
+
+            svgDireita.show();
+            svgEsquerda.hide();
         }
     });
 
