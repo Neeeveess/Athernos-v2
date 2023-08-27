@@ -3,18 +3,18 @@
 
     include 'src/views/index.php';
 
-    // require_once 'src/classes/User.php';
+    require_once 'src/classes/User.php';
 
-    // // use Athernos\classes\User;
-    // // use Athernos\classes\Produtos;
+    use Athernos\classes\User;
+    use Athernos\classes\Produtos;
 
-    // $test = new User();
-    // $dados = $test->listarUser();
-    // $prod= new Produtos();
+    $test = new User();
+    $dados = $test->listarUser();
+    $prod= new Produtos();
 
 ?>
 
-<!-- <table class="table table-striped table-hover">
+<table class="table table-striped table-hover">
             <thead>
 
             <tr>
@@ -43,4 +43,4 @@
             </tbody>
             
         </table>
-         -->
+        

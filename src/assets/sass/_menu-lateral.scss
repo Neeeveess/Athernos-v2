@@ -3,6 +3,9 @@
     svg {
         width: 25px;
         height: 25px;
+        path {
+            fill: $black-text;
+        }
     }
     position: relative;
     padding: 30px 15px;
