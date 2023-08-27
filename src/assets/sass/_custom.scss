@@ -14,6 +14,7 @@
     transition: all linear 200ms;
 }
 
+//Alerta customizado
 .div-alert {
     position: absolute;
     bottom: 10%;
@@ -57,4 +58,8 @@
     @include message();
     @include message("danger", #f5c6cb, #f8d7da, #721c24, time-danger);
     @include message("warning", #ffeeba, #fff3cd, #856404, time-warning);
+}
+
+.hide {
+    display: none !important;
 }

@@ -15,7 +15,6 @@ jQuery(document).ready(function ($) {
     const svgEsquerda = $(".svg-esquerda");
     const svgDireita = $(".svg-direita");
     svgDireita.hide();
-    console.log(svgDireita);
 
     menuHamburguer.on("click", () => {
         if (menuLateral.hasClass("close")) {
@@ -49,5 +48,24 @@ jQuery(document).ready(function ($) {
 
     menuHamburguer.on("click", () => {
         showMessage(msg, "success");
+    });
+
+    //Listar Nav Bar
+    const titulo = $(".nav-bar__title");
+
+    titulo.each(function () {
+        $(this).on("click", () => {
+            const itens = $(this).siblings();
+            const svgCima = $(this).find(".svg-cima");
+            const svgBaixo = $(this).find(".svg-baixo");
+            itens.toggleClass("hide");
+            if (itens.hasClass("hide")) {
+                svgBaixo.hide();
+                svgCima.show();
+            } else {
+                svgBaixo.show();
+                svgCima.hide();
+            }
+        });
     });
 });

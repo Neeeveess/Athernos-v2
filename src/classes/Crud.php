@@ -27,7 +27,7 @@
             // echo $this->conn->query($sql);
         }
 
-        private function insert($tabela, $dados){
+        public function insert($tabela, $dados){
             $col = "";
             $val = "";
 
@@ -48,17 +48,17 @@
             }
         }
 
-        private function update($tabela,$param,$cond){
+        public function update($tabela,$param,$cond){
             $sql = "UPDATE $tabela SET $param WHERE $cond";
             $this->connection->query($sql);
         }
 
-        private function delete($tabela, $coluna, $valor){
+        public function delete($tabela, $coluna, $valor){
             $sql = "DELETE FROM $tabela WHERE $coluna = $valor";
             $this->connection->query($sql);
         }
 
-        private function call($funcao){
+        public function call($funcao){
             $sql = "Call $funcao";
             $this->connection->query($sql);
         }
