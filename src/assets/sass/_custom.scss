@@ -20,6 +20,7 @@
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999;
 
     @extend %d-flex;
     flex-direction: column;

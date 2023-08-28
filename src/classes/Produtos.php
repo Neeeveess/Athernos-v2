@@ -81,7 +81,7 @@
             
             public function filtrarProduto($search){
                 // if(isset($_GET) and !empty($_GET['search'])){
-                    $select = $this->select('*',"listProd","nome LIKE '$var%' or id LIKE '$var%' or categoria LIKE '$search%'");
+                    $select = $this->select('*',"listProd","nome LIKE '$search%' or id LIKE '$search%' or categoria LIKE '$search%'");
                 }
             
             public function listarProdutos(){

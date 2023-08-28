@@ -1,7 +1,7 @@
 <?php
     namespace Athernos\classes;
 
-    use Athernos\config\Connect;
+    use Athernos\classes\Crud;
 
     class Ferramentas extends Crud {
 
@@ -11,7 +11,11 @@
 
         static function verificarSessão(){
             if(!isset($_SESSION['email'])){
-                header('Location:'.BASEURL.'views/telas/login.php');
+                // header('Location:'.BASEURL.'views/telas/login.php');
+                include 'src/views/telas/login.php';
+            }
+            else{
+                include 'src/views/index.php';
             }
         }
 

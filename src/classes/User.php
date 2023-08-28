@@ -14,8 +14,7 @@ use Athernos\classes\Crud;
         public function __construct(){
             parent::__construct();
         }
-
-        
+            
         public function getId()
         {
             return $this->id;
@@ -95,7 +94,7 @@ use Athernos\classes\Crud;
         }
         public function filtrarUser($search){
             // if(isset($_GET) and !empty($_GET['search'])){
-                $select = $this->select('*',"usuarios","nome LIKE '$var%' or id LIKE '$var%' or email LIKE '$serch%'");
+                $select = $this->select('*',"usuarios","nome LIKE '$search%' or id LIKE '$search%' or email LIKE '$search%'");
             }
         
         public function listarUser(){
@@ -121,7 +120,8 @@ use Athernos\classes\Crud;
         }
 
         public function login($email, $senha){
-            if($this->select("*","usuarios","email='$email' and senha= '$senha'")->num_rows>0){
+            $select = $this->select("*","usuarios","email='$email' and senha= '$senha'");
+            if($select->num_rows>0){
                 session_start();
                 while($rows = $select->fetch_object()){
                     $_SESSION['email'] = $rows->email;
@@ -130,7 +130,8 @@ use Athernos\classes\Crud;
                 }
                 header('Location:index.php');
             }else{
-                return "Usuario inválido";
+                 header('Location: src/views/telas/login.php?msg=1');
+              
             }
 
         }

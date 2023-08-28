@@ -8,7 +8,6 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-
     //MENU LATERAL
     const menuHamburguer = $("#menu-hamburguer");
     const menuLateral = $("#menu-lateral");
@@ -46,9 +45,9 @@ jQuery(document).ready(function ($) {
         }, 3000);
     }
 
-    menuHamburguer.on("click", () => {
-        showMessage(msg, "success");
-    });
+    // menuHamburguer.on("click", () => {
+    //     showMessage(msg, "success");
+    // });
 
     //Listar Nav Bar
     const titulo = $(".nav-bar__title");
